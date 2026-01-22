@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifra de César</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cifra de César</h1>
+
+    <textarea id="inputText" rows="4" placeholder="Digite seu texto aqui..."></textarea><br>
+    <input type="number" id="shift" value="3" min="0" max="25"><br>
+
+    <div class="buttons">
+      <button id="encryptBtn">Criptografar</button>
+      <button id="decryptBtn">Descriptografar</button>
+    </div>
+
+    <div class="output-container">
+      <textarea id="outputText" rows="4" placeholder="Resultado aparecerá aqui..." readonly></textarea>
+
+      <!-- Botão minimalista com ícones outline via SVG -->
+      <button id="copyBtn" title="Copiar resultado">
+        <svg id="copyIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="8" y="8" width="10" height="10" rx="2" ry="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

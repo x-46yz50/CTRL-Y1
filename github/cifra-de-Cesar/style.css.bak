@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top left, #00ff80, #0a0a0a 60%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  background: rgba(0, 55, 2.8, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  color: #eee;
+  box-shadow: 0 0 25px rgba(0, 255, 128, 0.25);
+  max-width: 500px;
+  width: 90%;
+  animation: fadeIn 1s ease;
+}
+
+h1 {
+  font-size: 2em;
+  color: #00ff80;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 128, 0.5);
+}
+
+textarea, input {
+  width: 80%;
+  max-width: 400px;
+  margin: 10px 0;
+  padding: 12px;
+  border: 2px solid #00ff80;
+  border-radius: 10px;
+  background: rgba(34, 34, 34, 0.7);
+  color: #00ff80;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  resize: none;
+}
+
+textarea:focus, input:focus {
+  box-shadow: 0 0 10px #00ff80;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  background: #00ff80;
+  color: #111;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #00ffaa;
+  transform: scale(1.05);
+}
+
+/* Caixinha de saída */
+.output-container {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  max-width: 400px;
+}
+
+#outputText {
+  width: 100%;
+  border: 2px solid #00ff80;
+  border-radius: 10px;
+  background: rgba(34, 34, 34, 0.7);
+  color: #00ff80;
+  font-size: 16px;
+  padding: 12px 40px 12px 12px; /* espaço pro ícone */
+  resize: none;
+}
+
+/* Botão de copiar com hitbox exata do ícone */
+#copyBtn {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+#copyBtn:hover svg {
+  stroke: #fff;
+}
+
+#copyBtn:active {
+  transform: scale(0.9);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
